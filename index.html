@@ -10,11 +10,37 @@
   </head>
   <body>
     <h1
-      class="text-center text-3xl font-semibold text-red-500 transition-all md:text-5xl"
+      class="text-center text-3xl font-semibold text-blue-500 transition-all md:text-5xl"
     >
-      Hello
+      Wonky Words
     </h1>
-
+    <form class="border-2 text-left">
+      <ul>
+        <li>
+          <label class="min-w-64" for="noun">Noun</label>
+          <input class="border-2 border-blue-500" id="noun" type="text" />
+        </li>
+        <li>
+          <label class="w-48" for="verb">Verb</label>
+          <input class="border-2 border-blue-500" id="verb" type="text" />
+        </li>
+        <li>
+          <label class="w-48" for="Adjective">Adjective</label>
+          <input class="border-2 border-blue-500" id="adjective" type="text" />
+        </li>
+        <li>
+          <label class="w-48" for="adverb">Adverb</label>
+          <input class="border-2 border-blue-500" id="adverb" type="text" />
+        </li>
+        <li>
+          <label class="w-48" for="properNoun">Proper Noun</label>
+          <input class="border-2 border-blue-500" id="properNoun" type="text" />
+        </li>
+      </ul>
+      <button class="rounded-md border-2 bg-cyan-200 p-3" type="submit">
+        Get Silly
+      </button>
+    </form>
     <script type="module" src="./src/index.js"></script>
   </body>
 </html>

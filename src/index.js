@@ -9,8 +9,16 @@ function handleSubmit(event) {
   const inputElValue = document.getElementById("lookUpInput").value;
   const query = URL + inputElValue + "?key=" + key;
   console.log(query);
-  fetch(query)
-    .then((response) => response.json())
-    .then((data) => console.log(data));
+  fetch(query).then((response) =>
+    response.json().then((data) => displayDefinition(data))
+  );
+
   resultEl.innerHTML = inputElValue + ": ";
+}
+
+function displayDefinition(data) {
+  Object.entries(data).forEach((entry) => {
+    const [key, value] = entry;
+    console.log(value.shortdef);
+  });
 }
